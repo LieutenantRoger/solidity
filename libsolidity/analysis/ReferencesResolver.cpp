@@ -93,7 +93,11 @@ bool ReferencesResolver::visit(Identifier const& _identifier)
 		string suggestions = m_resolver.similarNameSuggestions(_identifier.name());
 		string errorMessage =
 			"Undeclared identifier." +
-			(suggestions.empty()? "": " Did you mean " + std::move(suggestions) + "?");
+			(suggestions.empty()? "":
+				(string("\"" + _identifier.name() + "\"") != suggestions)?
+					(" Did you mean " + std::move(suggestions) + "?"):
+					(" Did you mean to declare " + std::move(suggestions) + " earlier?")
+			);
 		declarationError(_identifier.location(), errorMessage);
 	}
 	else if (declarations.size() == 1)

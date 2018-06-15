@@ -5,4 +5,4 @@ contract C {
     }
 }
 // ----
-// DeclarationError: (52-53): Undeclared identifier. Did you mean "a"?
+// DeclarationError: (52-53): Undeclared identifier. Did you mean to declare "a" earlier?

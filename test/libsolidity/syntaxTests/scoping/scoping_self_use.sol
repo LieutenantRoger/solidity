@@ -4,4 +4,4 @@ contract test {
     }
 }
 // ----
-// DeclarationError: (64-65): Undeclared identifier. Did you mean "a"?
+// DeclarationError: (64-65): Undeclared identifier. Did you mean to declare "a" earlier?
