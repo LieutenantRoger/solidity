@@ -1280,7 +1280,7 @@ BOOST_AUTO_TEST_CASE(deleteStruct)
 				uint nestedValue;
 				mapping (uint => bool) nestedMapping;
 			}
-			function test(){
+			constructor(){
 				toDelete = 5;
 				str.topValue = 1;
 				str.topMapping[0] = 1;
