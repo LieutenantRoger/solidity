@@ -4,3 +4,5 @@ contract C {
         uint a;
     }
 }
+// ----
+// DeclarationError: (52-53): Undeclared identifier. Did you mean "a"?

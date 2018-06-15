@@ -5,4 +5,6 @@ contract test {
 	}
 }
 // ----
-// DeclarationError: (71-80): Identifier already declared.
+// Warning: (71-80): This declaration shadows an existing declaration.
+// Warning: (46-55): Unused local variable.
+// Warning: (71-80): Unused local variable.
