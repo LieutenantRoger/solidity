@@ -155,7 +155,8 @@ library strings {
         // Starting at ptr-31 means the LSB will be the byte we care about
         var ptr = self._ptr - 31;
         var end = ptr + self._len;
-        for (uint len = 0; ptr < end; len++) {
+        uint len;
+        for (len = 0; ptr < end; len++) {
             uint8 b;
             assembly { b := and(mload(ptr), 0xFF) }
             if (b < 0x80) {
@@ -688,7 +689,8 @@ library strings {
             return "";
 
         uint len = self._len * (parts.length - 1);
-        for(uint i = 0; i < parts.length; i++)
+        uint i;
+        for(i = 0; i < parts.length; i++)
             len += parts[i]._len;
 
         var ret = new string(len);
